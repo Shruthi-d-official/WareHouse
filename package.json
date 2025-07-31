@@ -1,12 +1,34 @@
 {
-  "name": "warehouse",
+  "name": "warehouse-management-system",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Secure warehouse management system with RBAC",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
   },
-  "keywords": [],
+  "keywords": ["warehouse", "management", "rbac", "security"],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  }
 }
