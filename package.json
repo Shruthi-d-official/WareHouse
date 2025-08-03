@@ -24,7 +24,8 @@
     "express-validator": "^7.0.1",
     "pg": "^8.11.3",
     "dotenv": "^16.3.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
